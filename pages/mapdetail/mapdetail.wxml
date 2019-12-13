@@ -1,0 +1,19 @@
+<!--pages/mapdetail/mapdetail.wxml-->
+<nav/>
+<view class='search'>
+  <input placeholder='搜索目的地' placeholder-class="input-placeholder" bindinput='handleValue' focus='{{true}}'></input>
+  <image src='../../images/searchicon.png'></image>
+</view>
+<scroll-view class='container' scroll-y='true'>
+  <view wx:if="{{show}}">
+    <view class='des'>暂无输入地址，请重新输入</view>
+  </view>
+  <view wx:else>
+    <view class='list' wx:for="{{addresslist}}" wx:for-item="addresslist" wx:key="index" bindtap='goTomap'
+    data-lat="{{addresslist.location.lat}}"
+      data-lng="{{addresslist.location.lng}}">
+      <view class='title'>{{addresslist.title}}</view>
+      <view class='address'>{{addresslist.address}}</view>
+    </view>
+  </view>
+</scroll-view>

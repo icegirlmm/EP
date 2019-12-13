@@ -1,0 +1,47 @@
+<!--index.wxml-->
+<nav id="nav" img=''></nav>
+<view class='container'>
+  <view class='header'>
+    <swiper autoplay="{{true}}" duration="{{duration}}" indicator-dots='{{true}}' indicator-color='#fff' circular='{{true}}'>
+      <block wx:for="{{imgUrls}}" wx:key="index">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" mode='widthFix' />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='search' bindtap='getToMap'>
+    <image src='../../images/search.jpg' mode='widthFix'></image>
+  </view>
+</view>
+<view class='navigates'>
+  <navigator class='' url='../self/self' hover-class="none">
+    <view class='navigate'>
+      <image src='../../images/ower.png'></image>
+      <text>个人中心</text>
+    </view>
+
+  </navigator>
+  <navigator class='' url='../diforder/diforder' hover-class="none">
+    <view class='navigate'>
+      <image src='../../images/order.png'></image>
+      <text>订单</text>
+    </view>
+
+  </navigator>
+  <navigator class='' url='../issue/issue' hover-class="none">
+    <view class='navigate'>
+      <image src='../../images/issue.png'></image>
+      <text>发布</text>
+    </view>
+
+  </navigator>
+  <navigator class='' url='../share/share' hover-class="none">
+    <view class='navigate'>
+      <image src='../../images/share.png'></image>
+      <text>分享</text>
+    </view>
+
+  </navigator>
+
+</view>

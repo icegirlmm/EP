@@ -1,0 +1,64 @@
+/* pages/self/self.wxss */
+.headerimg image{
+  display: block;
+  width: 208rpx;
+  height: 208rpx;
+  border-radius: 50%;
+  margin: 20rpx auto;
+}
+.img{
+   overflow:hidden;  
+   width: 208rpx;
+   height: 208rpx;
+   border-radius: 50%;
+   margin: 20rpx auto;
+   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);  
+}
+.headerimg text{
+  display: block;
+  color: #fff;
+  font-size: 44rpx;
+  text-align: center;
+}
+.name{
+  display: block;
+  color: #fff;
+  font-size: 44rpx;
+  text-align: center;
+}
+.container navigator{
+ width: 670rpx;
+ height: 100rpx;
+ background: #fff;
+ border-radius: 40rpx;
+ margin: 54rpx auto;
+ line-height: 100rpx;
+}
+.container button{
+  width: 670rpx;
+  height: 100rpx;
+  background: #fff;
+  border-radius: 40rpx;
+  margin: 54rpx auto;
+  line-height: 100rpx;
+  padding-left: 0;
+  padding-right:0;
+  text-align:left;
+  color: #000;
+}
+.button-hover {
+color:rgba(0, 0, 0,0);
+background-color:#DEDEDE;
+
+}
+.container text{
+  padding: 20rpx;
+}
+.container image{
+  float: right;
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+  margin-top: 25rpx;
+}
+

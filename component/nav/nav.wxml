@@ -1,0 +1,18 @@
+<!--component/nav/nav.wxml-->
+<view style='height:{{navH}}px'>
+  <view class='nav' style='height:{{navH}}px'>
+    <view class='nav-title'>
+    <text wx:if="{{titleshow}}">{{title}}</text>
+     <view  bindtap='{{fun}}'
+            class="nav-back">
+      <image wx:if="{{backshow}}" 
+            style="width:{{imagewidth}}rpx;"
+            src='{{img}}'
+            mode='aspectFit' 
+            class='back' 
+       ></image> 
+     </view>
+    <!-- </view> -->
+    </view>
+  </view>
+</view>

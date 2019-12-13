@@ -1,0 +1,68 @@
+/* pages/mapdetail/mapdetail.wxss */
+
+.search {
+  width: 720rpx;
+  height: 70rpx;
+  background: #fff37e;
+  border-radius: 12px;
+  margin: 0 auto;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.search input {
+  display: inline-block;
+  width: 600rpx;
+  height: 70rpx;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+}
+
+.search .input-placeholder {
+  color: #fff;
+  font-size: 28rpx;
+}
+
+.search image {
+  float: right;
+  margin-right: 20rpx;
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.container {
+  width: 700rpx;
+  height: 1000rpx;
+  margin-top: 40rpx;
+  background: #fff;
+  border-radius: 24rpx;
+}
+
+.container .list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  height: 150rpx;
+  color: rgb(29, 27, 27);
+  font-size: 30rpx;
+  border-bottom: 1px solid #d8d8d8;
+  margin: 0 auto;
+}
+
+.container .list .title {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.container .list .address {
+  font-size: 30rpx;
+  color: rgba(90, 83, 83, 0.705);
+}
+.des{
+  margin:100rpx auto;
+  text-align: center;
+  font-size: 30rpx;
+  color: rgba(90, 83, 83, 0.705)
+}

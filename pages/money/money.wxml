@@ -1,0 +1,17 @@
+<!--pages/money/money.wxml-->
+<nav title='我的钱包'/>
+<view class='container'>
+<view class='des'>
+<image class="moneyicon" src='../../images/yue-copy.png'></image>
+<text>账户余额</text>
+<text class='money'>¥{{balance}}</text>
+</view>
+<view>
+<button class='moneybtn'>充值</button>
+<button class='moneybtn' bindtap='goTopassword'>设置密码</button>
+</view>
+<view class="despaper">
+ <image  class="moneypaper" mode="aspectFit" src='../../images/zhangdan.png'></image>
+ <view class="nopaper">暂无帐单</view>
+</view>
+</view>

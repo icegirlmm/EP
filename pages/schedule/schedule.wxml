@@ -1,0 +1,85 @@
+<!--pages/schedule/schedule.wxml-->
+<nav/>
+  <form>
+    <view class='address_list'>
+      <view class='list'>
+        <label>姓名</label>
+        <input type="text" placeholder='请输入' placeholder-style='color:#ccc' placeholder-class='input-placeholder' bindinput="name" value="{{name}}" confirm-type="next" ></input>
+      </view>
+      <view class='list'>
+        <label>手机号</label>
+        <input type="number" placeholder='请输入' placeholder-style='color:#ccc' placeholder-class='input-placeholder' bindinput="orderphone" ></input>
+      </view>
+       <view class='list'>
+        <label>车牌号</label>
+        <input type="number" placeholder='请输入' placeholder-style='color:#ccc' placeholder-class='input-placeholder' bindinput="ordercarnum" ></input>
+      </view>
+       <view class='list'>
+        <label>品牌</label>
+        <input type="number" placeholder='请输入' placeholder-style='color:#ccc' placeholder-class='input-placeholder' bindinput="ordercarbrand" ></input>
+      </view>
+       <view class='list'>
+        <label>支付款</label>
+        <!-- <input type="number" placeholder='请输入' dir="rtl" placeholder-style='color:#ccc' placeholder-class='input-placeholder' value='{{address.mobile}}' bindinput="mobile" name='mobile_1' focus='{{mobile_focus}}'></input> -->
+        <text class='money'>¥{{ordermoney}}</text>
+      </view>
+        <view class='list'>
+        <label class=''>预定日期</label>
+        <view class='address'>
+          <view class="section">
+            <!-- <view class="section__title">省市区选择器</view> -->
+            <picker 
+            mode="date"
+            value="{{date}}"
+            start="2015-09-01"
+            end="2017-09-01"
+            bindchange="bindDateChange">
+              <view class="picker">
+               {{date}}
+              </view>
+            </picker>
+          </view>
+
+        </view>
+      </view>
+    </view>
+    <button bindtap='handleSureOrder'>确认订单</button>
+  </form>
+
+  <block>
+  <!--输入钱包密码--> 
+<view wx:if="{{wallets_password_flag}}" class="wallets-password"> 
+<view class="input-content-wrap"> 
+<view class="top"> 
+<view catchtap="close_wallets_password" class="close">×</view> 
+<view class="txt">请输入支付密码</view> 
+<view catchtap="modify_password" class="forget">忘记密码</view> 
+</view> 
+<view class="actual_fee"> 
+<span>￥</span> 
+<text>{{ordermoney}}</text> 
+</view> 
+<view catchtap="set_Focus" class="input-password-wrap"> 
+<view class="password_dot"> 
+<i wx:if="{{wallets_password.length>=1}}"></i> 
+</view> 
+<view class="password_dot"> 
+<i wx:if="{{wallets_password.length>=2}}"></i> 
+</view> 
+<view class="password_dot"> 
+<i wx:if="{{wallets_password.length>=3}}"></i> 
+</view> 
+<view class="password_dot"> 
+<i wx:if="{{wallets_password.length>=4}}"></i> 
+</view> 
+<view class="password_dot"> 
+<i wx:if="{{wallets_password.length>=5}}"></i> 
+</view> 
+<view class="password_dot"> 
+<i wx:if="{{wallets_password.length>=6}}"></i> 
+</view> 
+</view> 
+</view> 
+<input bindinput="set_wallets_password" class="input-content" password type="number" focus="{{isFocus}}" maxlength="6" /> 
+</view> 
+  </block>

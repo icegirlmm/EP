@@ -1,0 +1,41 @@
+<!--pages/publishList/publishList.wxml-->
+<nav title='我的发布订单'/>
+<view class='pubList-container'>
+  <view wx:if="{{hasData}}">
+    <view wx:for="{{NoticeList}}" wx:key="Notice" wx:for-item="Notice">
+      <view class='pubList-content'>
+       <view class='carname'>{{Notice.parkname}}</view>
+        <view class='content-time-money'>
+          <view class='pub-time'>
+            <text class='index'>{{index+1}}</text>
+            <text>发布于： {{Notice.date}}</text>
+          </view>
+          <view class='pub-money'>
+            <!-- <image src='/images/money.png'></image> -->
+            <text>{{Notice.parkprice}}元</text>
+          </view>
+        </view>
+        <text class='notice-content'>车位描述：{{Notice.parkdec}}</text>
+        <view class='status-btn'>
+          <text wx:if="{{Notice.status==0&&!Notice.isPublish}}">您已取消发布,无人预定您的车位</text>
+          <!-- <text wx:elif="{{Notice.status==0&&Notice.isPublish}}">待接单</text>
+          <text wx:else>已被接单</text> -->
+          <!-- <view wx:if="{{Notice.isPublish}}" class='btn' bindtap='cancelPublish' data-noticeid="{{Notice._id}}">取消发布</view>
+          <view wx:else class='btn' bindtap='deleteRewardNotice' data-noticeid="{{Notice._id}}">删除记录</view> -->
+        </view>
+        <view class='status-btn'>
+          <view class='end-info'>
+            <text>收到 {{Notice.status}} 人预定</text>
+            <view wx:if="{{Notice.status}}" bindtap='goBookDetail' data-noticeid="{{Notice._id}}">
+              <text>查看</text>
+            </view>
+          </view>
+          <view wx:if="{{Notice.isPublish}}" class='btn' bindtap='cancelPublish' data-noticeid="{{Notice._id}}">取消发布</view>
+          <view wx:else class='btn' bindtap='deleteRewardNotice' data-noticeid="{{Notice._id}}">删除记录</view>
+        </view>
+        
+      </view>
+    </view>
+  </view>
+  <view wx:else class=" none ">暂无任何发布消息</view>
+</view>

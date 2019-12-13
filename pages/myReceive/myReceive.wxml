@@ -1,0 +1,69 @@
+<nav title='我的接单'/>
+<view wx:if="{{hasData}}">
+  <view wx:for="{{receiveList}}" wx:key="receive" wx:for-item="receive">
+    <view wx:if="{{receive.status!=4 && receive.status!=5 && receive.status!=6}}">
+      <view class="order-content">
+       <view class='header'>
+       {{receive.parkName}}
+       </view>
+        <view class="order-info">
+          <view class="user-info">
+            <image class="order-avatar" src="{{receive.issueAvatarUrl}}"></image>
+           <text>{{receive.issueNickName}} 的接单</text>
+          </view>
+          <view class="money-info">
+            <text>¥ {{receive.rewardMoney}}元</text>
+          </view>
+        </view>
+
+
+      <view class="order-text">
+        <text>预定车位者昵称：{{receive.orderNickName}}</text>
+      </view>
+       <view class="order-text">
+       <text>预定车位者联系方式：{{receive.ordercarbrand}}</text> 
+       </view>
+       <view class="order-text">
+       <text>对方车牌号：{{receive.ordercarnum}}</text> 
+       </view>
+        <view class="order-text">
+       <text>对方汽车品牌：{{receive.orderphone}}</text> 
+       </view>
+
+        <view class='order-time'>接单时间: {{receive.date}}</view>
+
+        <view class="order-time-btn" wx:if="{{receive.status == 0}}">
+          <text>等待对方停车...</text>
+          <view class="order-btn" bindtap='startContact'  data-toUser="{{receive}}">联系对方</view>
+        </view>
+        <view class="order-time-btn" wx:elif="{{receive.status == 1}}">
+          <text>对方已取消订单</text>
+          <view class="order-btn" bindtap='deleteRecord' data-orderId="{{receive._id}}">删除记录</view>
+        </view>
+        <view class="order-time-btn" wx:elif="{{receive.status == 2}}">
+          <text>您已取消订单</text>
+          <view class="order-btn" bindtap='deleteRecord' data-orderId="{{receive._id}}">删除记录</view>
+        </view>
+        <view class="order-time-btn" wx:elif="{{receive.status == 3}}">
+          <text>订单已完成</text>
+          <view class="order-btn" bindtap='deleteRecord' data-orderId="{{receive._id}}">删除记录</view>
+        </view>
+
+        <view class="provide-btn" wx:if="{{receive.status == 0 && !receive.orderConfirm &&receive.receiveConfirm}}">
+          <text>等待对方确认完成订单</text>
+          <view class="order-btn" bindtap='deleteRecord' data-orderId="{{receive._id}}">删除记录</view>
+        </view>
+        <view class="provide-btn" wx:elif="{{receive.status == 0 && receive.orderConfirm &&!receive.receiveConfirm}}">
+          <text>对方已确认完成订单</text>
+          <view class="order-btn" bindtap='confirmFinish' data-orderId="{{receive._id}}">确认完成</view>
+        </view>
+        <view class="provide-btn" wx:elif="{{receive.status == 0}}">
+          <view class="order-btn" bindtap='cancelOrder' data-orderId="{{receive._id}}">取消订单</view>
+          <view class="order-btn" bindtap='confirmFinish' data-orderId="{{receive._id}}">确认完成</view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>
+<view wx:else class="none">您还没有接单记录</view>

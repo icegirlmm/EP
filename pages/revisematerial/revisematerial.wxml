@@ -1,0 +1,8 @@
+<!--pages/revisematerial/revisematerial.wxml-->
+<nav title='个人资料'/>
+<view class='container'>
+  <view><text>姓名：</text><input placeholder='请输入姓名'  bindinput='handleName'></input></view>
+  <view><text>电话：</text><input placeholder='请输入电话'   bindinput='handletel'></input></view>
+  <view><text>车牌号：</text><input placeholder='请输入车牌号'   bindinput='handleplate'></input></view>
+  <button class='revise' bindtap='handleRevise'>保存</button>
+</view>

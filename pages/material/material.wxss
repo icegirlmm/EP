@@ -1,0 +1,19 @@
+/* pages/material/material.wxss */
+.container{
+  margin-top: 60rpx;
+  width: 670rpx;
+  height: 800rpx;
+  background: #fff;
+  border-radius: 10rpx;
+}
+.container view{
+  width: 90%;
+  margin:0 auto;
+  line-height: 100rpx;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.revise{
+  margin-top: 100rpx;
+  width: 80%;
+  background: rgb(29, 184, 101);
+}

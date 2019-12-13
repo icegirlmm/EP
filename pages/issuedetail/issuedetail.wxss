@@ -1,0 +1,171 @@
+/* pages/order/order.wxss */
+.orderlist{
+  position: relative;
+  width: 670rpx;
+  min-height: 330rpx;
+  height: auto;
+  background: #fff;
+  margin: 10rpx auto;
+  border-radius: 10px;
+}
+.adress{
+  display: flex;
+  padding-top: 10rpx;
+}
+.adress image{
+  width: 160rpx;
+  height: 160rpx;
+}
+image.headerimg{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+}
+.adress .adressfr{
+  flex: 1;
+  margin-left: 20rpx;
+}
+.adressname{
+font-size: 44rpx;
+line-height:44rpx;
+}
+.time{
+  font-size: 32rpx;
+}
+.detail{
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+  padding-bottom: 20rpx;
+}
+.money{
+  font-size: 32rpx;
+  display: block;
+}
+.dec{
+  font-size: 32rpx;
+  padding-right: 20rpx;
+}
+.head{
+  display: flex;
+  justify-items: center;
+}
+.title{
+  font-weight: bold;
+  line-height: 70rpx;
+}
+
+button{
+  width:670rpx;
+  background: #9ADC93;
+  font-size: 32rpx;
+  color: #000;
+  margin: 30rpx auto;
+}
+button.button-hover{
+   background: #9ADC93;
+}
+.disabledColor{
+  color: rgba(153, 146, 146, 0.801);
+}
+.addressdetail{
+  font-size: 28rpx;
+  color: rgb(88, 88, 88);
+}
+
+/* 时间选择 */
+/* 底部弹出timeModel按钮 */
+
+/* 日期弹出框 */
+.modal {
+    width: 90%;
+    height: 700rpx;
+    background: #fff;
+    margin: 0 auto;
+    border-radius:10px;
+
+}
+/* 弹出框主体 */
+.modal_container {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    border-radius:10px;
+}
+
+/* modal_header */
+.modal_header {
+    padding: 20rpx;
+    text-align: center;
+    font-size: 11pt;
+}
+/* header_tip */
+.header_tip {
+    position: relative;
+    font-size: 9pt;
+    color: #999;
+}
+
+/* time日期主体view */
+.time {
+    background: #f7f7f7;
+    text-align: center;
+    font-size: 11pt;
+}
+/* time日期主体滚动view */
+.time_scroll {
+    white-space: nowrap;
+    width: 100%;
+    height:100rpx;
+    line-height:50rpx;
+}
+
+.scroll-view-item {
+    height: 100rpx;
+}
+/* 日期 */
+.scroll_item {
+    display: inline-block;
+    padding: 0 40rpx;
+    height: 100rpx;
+    box-sizing: border-box;
+}
+
+/* time_active选择状态 */
+.time_active {
+    color: #79D3FD;
+    border-bottom: 4rpx solid #79D3FD;
+}
+
+/* 时间 */
+.hour {
+    height: 450rpx;
+    padding: 20rpx 0 0 20rpx;
+}
+
+.hour_item {
+    /* width: 22%; */
+    box-sizing: border-box;
+    height: 70rpx;
+    line-height: 70rpx;
+    border-radius: 10rpx;
+    text-align: center;
+    /* float: left; */
+    border: 2rpx solid #eee;
+    font-size: 11pt;
+    margin-right: 6%;
+    margin-bottom: 20rpx;
+}
+
+/* hour_active*/
+
+.hour_active {
+    background: #79D3FD;
+    color: #fff;
+    border: 2rpx solid #79D3FD;
+}
+
+/* hour_unactive */
+
+.hour_unactive {
+    color: #999;
+}

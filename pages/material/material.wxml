@@ -1,0 +1,8 @@
+<!--pages/material/material.wxml-->
+<nav title='个人资料'/>
+<view class='container'>
+  <view><text>姓名：</text><text>{{nickName}}</text></view>
+  <view><text>电话：</text><text>{{telphone}}</text></view>
+  <view><text>车牌号：</text><text>{{plate}}</text></view>
+  <button class='revise' bindtap='handleRevise'>修改</button>
+</view>

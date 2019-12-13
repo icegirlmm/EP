@@ -1,0 +1,53 @@
+/* pages/map/map.wxss */
+.search{
+  width: 720rpx;
+  height: 70rpx;
+  background: #FFF37E;
+  border-radius: 12px;
+  margin:0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search text{
+  font-size: 28rpx;
+  color: #fff;
+}
+.search image{
+  width: 44rpx;
+  height: 44rpx;
+}
+.map-container {
+  position: absolute;
+  top: 220rpx;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.map {
+  width: 100%;
+  height: 100%;
+}
+.localimg{
+  position: absolute;
+  left: 50%;
+  top:50%;
+  margin-left: -25rpx;
+  margin-top: -25rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+cover-image.origin{
+  position: absolute;
+  left: 40rpx;
+  bottom: 100rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+cover-image.fabu{
+  position: absolute;
+  right: 40rpx;
+  top: 40rpx;
+  width: 80rpx;
+  height: 80rpx;
+}

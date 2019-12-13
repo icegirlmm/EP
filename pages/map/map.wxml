@@ -1,0 +1,13 @@
+<!--pages/map/map.wxml-->
+<nav id='nav'/>
+<view class='search' bindtap='goToDetailMap'>
+<text>搜索目的地</text>
+<image src='../../images/searchicon.png'></image>
+</view>
+<view class="map-container">
+  <map id="map" class="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="16"  circles="{{circles}}" markers="{{markers}}" bindmarkertap="handleMarkerTap" ></map>
+  <cover-image class='localimg' src='../../images/address.png' bindtap='getLocation'></cover-image>
+
+  <cover-image class='origin' src='../../images/dingwei.png' bindtap='getLocation'></cover-image>
+  <cover-image class='fabu' src='../../images/fabu.png' bindtap='gotoissue'></cover-image>
+</view>

@@ -1,0 +1,13 @@
+/**app.wxss**/
+.container {
+  width: 720rpx;
+  height: 100%;
+  margin: 0 auto;
+  /* background: green; */
+} 
+page{
+  background: #79D3FD;
+}
+button{
+  color: #fff;
+}

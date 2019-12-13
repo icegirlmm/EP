@@ -1,0 +1,46 @@
+<!--pages/issuedetail/issuedetail.wxml-->
+<nav/>
+<view class='orderlist'>
+  <view class='adress'>
+    <image src='../../images/issue.png'></image>
+    <view class='adressfr'>
+      <view class='adressname'>{{parkname}}</view>
+       <view class='addressdetail'>{{addressdetail}}</view>
+      <text class='time'>{{nickName}} 发布于：{{date}}</text>
+      <text class='money'>¥ {{money}}元/小时</text>
+    </view>
+  </view>
+  <view class='detail'>
+  <view class='head'>
+  <text class='title'>描述:</text>
+  </view>
+     <view class='dec'>{{content}}</view>
+  </view>
+</view>
+
+<!-- 时间选择 -->
+<view class="modal">
+    <!-- 弹出框主体 -->
+    <view class='modal_container'>
+        <!-- 头部显示 -->
+        <view class='modal_header'>
+            <view>预定时间</view>
+            <view class='header_tip'>{{yyDay}}天内的预订</view>
+        </view>
+        <!-- 日期 -->
+        <view class="time">
+            <scroll-view class="time_scroll" scroll-x="true" >
+                <view data-index="{{index}}" bindtap="timeClick" class="scroll_item {{currentTab==index?'time_active':''}}" wx:for="{{timeList}}" wx:key="{{index}}">
+                    <view>{{item.name}}</view>
+                    <view>{{item.date}}</view>
+                </view>
+            </scroll-view>
+        </view>
+        <!-- 时间段 -->
+        <scroll-view class='hour' scroll-y="true">
+            <view bindtap="hourClick" class="hour_item {{item.isShow?'':'hour_unactive'}} {{hourIndex==index?'hour_active':''}} " wx:for="{{hourList}}" wx:key="{{index}}" data-index="{{index}}" data-isshow="{{item.isShow}}">{{item.hour}}</view>
+        </scroll-view>
+    </view>
+</view>
+<!-- 时间选择 结束 -->
+<button class="ordertime" bindtap='order' class="{{issueuserId == userId ? 'disabledColor':''}}">立即预定</button>

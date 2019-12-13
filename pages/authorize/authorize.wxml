@@ -1,0 +1,9 @@
+<!--pages/authorize/authorize.wxml-->
+<nav id='nav'/>
+<view class='icon'>
+<image src='../../images/park.png'></image>
+</view>
+
+<button bindgetuserinfo="authorFunc" open-type='getUserInfo'>登录</button>
+<text class='des'>为了更好的使用此小程序请登录后使用</text>
+

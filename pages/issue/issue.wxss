@@ -1,0 +1,62 @@
+/* pages/issue/issue.wxss */
+.container{
+  margin-top: 60rpx;
+  width: 670rpx;
+  height: 900rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+}
+.container image{
+  width: 100rpx;
+  height: 100rpx;
+  float: right;
+}
+.container>view{
+  display: flex;
+  width: 90%;
+  margin:0 auto;
+  line-height: 100rpx;
+  border-bottom: 1px solid #f5f5f5;
+  align-items: center;
+}
+.container>view>input{
+  flex: 1;
+  display: inline-block;
+  width: 400rpx;
+  line-height: 80rpx;
+}
+.parkdescribe{
+  position: relative;
+}
+.parkdescribe .textarea-placeholder{
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+.parkdescribe textarea{
+  padding-top: 20rpx;
+  line-height: 50rpx;
+}
+.revise{
+  margin-top: 50rpx;
+  width: 80%;
+  background: rgb(29, 184, 101);
+}
+.parkdescribe label{
+  position: absolute;
+  bottom: 10rpx;
+  right: 0;
+  width: 170rpx;
+  line-height: 30rpx;
+  font-size: 30rpx;
+  color: #ccc;
+}
+.title{
+  width: 150rpx;
+}
+.address{
+    flex: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

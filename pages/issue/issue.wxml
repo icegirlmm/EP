@@ -1,0 +1,35 @@
+<!--pages/issue/issue.wxml-->
+<nav title='发布车位' />
+<view class='container'>
+<view class='place' bindtap='handleAddressClick'>
+    <text class='title'>车位地址：</text>
+     <!-- <input placeholder='请输入'></input> -->
+     <view wx:if='{{!hasaddress}}'>
+      <text>请选择发布的车位地址</text>
+       <image src='../../images/youjiantou.png'></image>
+     </view>
+     <view wx:else class='address'>
+         <text>{{address}}</text>
+      </view>
+     
+  </view>
+  <view class='name'>
+    <text>车位名称：</text>
+     <input placeholder='请输入' bindinput='handleName'></input>
+    <!-- <image src='../../images/youjiantou.png'></image> -->
+  </view>
+  <view class='tel'>
+    <text>联系方式：</text>
+    <input placeholder='请输入' bindinput='handleTel' type='number'></input>
+  </view>
+  <view class='price'>
+    <text>价格：</text>
+    <input placeholder='请输入' bindinput='handlePrice' type='number'></input>
+    <label>元/小时</label>
+  </view>
+  <view class='parkdescribe'>
+    <textarea placeholder='车位描述' placeholder-class='textarea-placeholder' bindinput='handleParkDescribe'></textarea>
+    <label>不超过50字</label>
+  </view>
+  <button class='revise' bindtap='handleRevise'>发布</button>
+</view>

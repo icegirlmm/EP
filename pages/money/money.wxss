@@ -1,0 +1,58 @@
+/* pages/money/money.wxss */
+page{
+  overflow-y:hidden;
+}
+.container{
+ position: absolute;
+ width: 670rpx;
+ top:150rpx;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: #fff;
+}
+.des{
+  line-height: 100rpx;
+  display: block;
+  text-align: center;
+  font-size: 40rpx;
+  color: #fff;
+  background: #79D3FD;
+}
+.money{
+  font-size: 40rpx;
+  text-align: center;
+  line-height: 50rpx;
+  margin-left: 20rpx;
+}
+.moneyicon{
+  position: relative;
+  top: 5rpx;
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 100rpx;
+  margin-right: 20rpx;
+}
+.moneybtn{
+  /* margin-top: 100rpx; */
+  width: 50%;
+  float: left;
+  background: #fff;
+  color: #000;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  font-weight: lighter;
+}
+button{
+  border-radius:0;
+}
+.despaper{
+  text-align: center;
+}
+.moneypaper{
+  width: 50%;
+
+}
+.nopaper{
+  color: rgb(180, 174, 174);
+}

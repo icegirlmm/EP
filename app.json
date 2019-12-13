@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/password/password",
+    "pages/pay/pay",
+    "pages/logs/logs",
+    "pages/map/map",
+    "pages/mapdetail/mapdetail",
+    "pages/self/self",
+    "pages/order/order",
+    "pages/issue/issue",
+    "pages/share/share",
+    "pages/money/money",
+    "pages/material/material",
+    "pages/revisematerial/revisematerial",
+    "pages/message/message",
+    "pages/authorize/authorize",
+    "pages/setting/setting",
+    "pages/chat/chat",
+    "pages/issuedetail/issuedetail",
+    "pages/schedule/schedule",
+    "pages/diforder/diforder",
+    "pages/publishList/publishList",
+    "pages/myReceive/myReceive",
+    "pages/bookDetail/bookDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "易共享停车位",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#FFDA44",
+    "navigationStyle": "custom"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}

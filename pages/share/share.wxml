@@ -1,0 +1,24 @@
+<!--pages/share/share.wxml-->
+<nav title="易共享停车位"/>
+<view class='head'>
+  <view class='head-img'>
+    <image src='{{avatarUrl}}'></image>
+  </view>
+  <view class='head-text'>
+    <view class='center'>
+      <text class='h1'>{{nickName}}</text>
+      <text class='h2'>找车位难？来易停车提前预定</text>
+    </view>
+  </view>
+</view>
+<view class='code'>
+  <view class='codeimg'>
+    <image class='code-img' src='{{getimgurl}}' mode='widthFix'></image>
+  </view>
+  <!-- <text class="word">长按识别二维码</text> -->
+  <view>
+    <button class='share' hover-class="btn-hover" open-type='share'>分享</button>
+    <button class='save' hover-class="btn-hover" bindopensetting="handSetting" wx:if="{{setting}}" open-type="openSetting">保存</button>
+    <button class='save' hover-class="btn-hover" bindtap='handleSetting' wx:if="{{!setting}}">保存</button>
+  </view>
+</view>
